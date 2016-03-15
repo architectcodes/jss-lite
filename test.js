@@ -44,3 +44,23 @@ test(
 `
   )
 );
+
+test(
+  'Works with nested blocks',
+  assert => assert.is(
+    cssInJs({
+      '@media screen and (min-width: 80em)': {
+        '.my-button': {
+          width: '100%',
+        },
+      },
+    }),
+
+`@media screen and (min-width: 80em) {
+  .my-button {
+    width: 100%;
+  }
+}
+`
+  )
+);
