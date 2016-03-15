@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "develop": "ava --watch",
-    "test": "ava"
+    "test": "nyc ava"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,10 @@
   "homepage": "https://github.com/tomekwi/css-in-js#readme",
   "devDependencies": {
     "ava": "^0.13.0",
+    "coveralls": "^2.11.8",
     "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.1.0"
+    "eslint-config-airbnb": "^6.1.0",
+    "nyc": "^6.1.1"
   },
   "dependencies": {
     "indent-string": "^2.1.0"

@@ -1,6 +1,9 @@
 [![Travis – build status
 ](https://img.shields.io/travis/tomekwi/css-in-js/master.svg?style=flat-square
 )](https://travis-ci.org/tomekwi/css-in-js
+) [![Coveralls – test coverage
+](https://img.shields.io/coveralls/tomekwi/css-in-js.svg?style=flat-square
+)](https://coveralls.io/r/tomekwi/css-in-js
 ) [![David – status of dependencies
 ](https://img.shields.io/david/tomekwi/css-in-js.svg?style=flat-square
 )](https://david-dm.org/tomekwi/css-in-js
