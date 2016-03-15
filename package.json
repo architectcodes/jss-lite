@@ -1,0 +1,25 @@
+{
+  "name": "css-in-js",
+  "version": "0.0.0",
+  "description": "Write stylesheets in JS. Works with any stack.",
+  "main": "index.js",
+  "scripts": {
+    "develop": "ava --watch",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomekwi/css-in-js.git"
+  },
+  "author": "Tomek Wiszniewski <t.wiszniewski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomekwi/css-in-js/issues"
+  },
+  "homepage": "https://github.com/tomekwi/css-in-js#readme",
+  "devDependencies": {
+    "ava": "^0.13.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0"
+  }
+}
