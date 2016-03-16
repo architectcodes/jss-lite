@@ -4,15 +4,22 @@ const renderObject = (input) => {
   const selectors = Object.keys(input);
 
   const render = (selector) => {
-    const styleObject = input[selector];
+    const style = input[selector];
+    const stylesArray = (Array.isArray(style) ?
+      style :
+      [style]
+    );
+
     return `${selector} {
 ${
-  Object.keys(styleObject).map(
-    (property) => (typeof styleObject[property] === 'string' ?
-      `  ${property}: ${styleObject[property]};\n` :
-      indentString(renderObject(styleObject), '  ')
-    )
-  ).join('')
+  stylesArray.map((styleObject) => (
+    Object.keys(styleObject).map(
+      (property) => (typeof styleObject[property] === 'string' ?
+        `  ${property}: ${styleObject[property]};\n` :
+        indentString(renderObject(styleObject), '  ')
+      )
+    ).join('')
+  )).join('')
 }}
 `;
   };

@@ -64,3 +64,24 @@ test(
 `
   )
 );
+
+test(
+  'Supports multiple property fallbacks',
+  assert => assert.is(
+    cssInJs({
+      '.drag-me': [{
+        cursor: 'pointer',
+      }, {
+        cursor: '-webkit-grab',
+      }, {
+        cursor: 'grab',
+      }],
+    }),
+`.drag-me {
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+`
+  )
+);
