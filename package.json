@@ -1,6 +1,6 @@
 {
   "name": "jss-lite",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Write stylesheets in JS. Works with any stack.",
   "main": "index.js",
   "scripts": {
