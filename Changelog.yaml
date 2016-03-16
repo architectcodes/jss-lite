@@ -1,3 +1,7 @@
+1.1.1:
+  date: 2016-03-16
+  note: First release under the new name “jss-lite”
+
 1.1.0:
   date: 2016-03-16
   new features:
@@ -5,4 +9,4 @@
 
 1.0.0:
   date: 2016-03-15
-  note: Initial release
+  note: Initial release as “css-in-js”
