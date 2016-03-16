@@ -74,6 +74,15 @@ const indigo = '#3F51B5';
 
 
 
+<a                                                       id="/syntax"></a>&nbsp;
+
+## Syntax
+
+Any JS object is translated recursively to a CSS tree. To ensure two-way compatibility, we only support [git.io/orthodox](https://git.io/orthodox) style objects.
+
+
+
+
 <a                                                      id="/credits"></a>&nbsp;
 
 ## Credits
