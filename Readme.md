@@ -80,6 +80,41 @@ const indigo = '#3F51B5';
 
 Any JS object is translated recursively to a CSS tree. To ensure two-way compatibility, we only support [git.io/orthodox](https://git.io/orthodox) style objects.
 
+<a                                                   id="/syntax/fallbacks"></a>
+
+### Fallbacks
+
+When using fancy things which need a CSS fallback, you might want to set the same property more than once:
+
+```css
+.drag-me {
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+```
+
+To cover these cases, we allow passing an array of style objects:
+
+```js
+▸ cssInJs({
+    '.drag-me': [{
+      cursor: 'pointer',
+    }, {
+      cursor: '-webkit-grab',
+    }, {
+      cursor: 'grab',
+    }],
+  });
+◂ `
+  .drag-me {
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  `
+```
+
 
 
 
