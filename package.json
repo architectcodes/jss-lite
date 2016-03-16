@@ -1,5 +1,5 @@
 {
-  "name": "css-in-js",
+  "name": "jss-lite",
   "version": "1.1.0",
   "description": "Write stylesheets in JS. Works with any stack.",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomekwi/css-in-js.git"
+    "url": "git+https://github.com/tomekwi/jss-lite.git"
   },
   "author": "Tomek Wiszniewski <t.wiszniewski@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tomekwi/css-in-js/issues"
+    "url": "https://github.com/tomekwi/jss-lite/issues"
   },
-  "homepage": "https://github.com/tomekwi/css-in-js#readme",
+  "homepage": "https://github.com/tomekwi/jss-lite#readme",
   "devDependencies": {
     "ava": "^0.13.0",
     "coveralls": "^2.11.8",

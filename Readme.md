@@ -1,12 +1,12 @@
 [![Travis – build status
-](https://img.shields.io/travis/tomekwi/css-in-js/master.svg?style=flat-square
-)](https://travis-ci.org/tomekwi/css-in-js
+](https://img.shields.io/travis/tomekwi/jss-lite/master.svg?style=flat-square
+)](https://travis-ci.org/tomekwi/jss-lite
 ) [![Coveralls – test coverage
-](https://img.shields.io/coveralls/tomekwi/css-in-js.svg?style=flat-square
-)](https://coveralls.io/r/tomekwi/css-in-js
+](https://img.shields.io/coveralls/tomekwi/jss-lite.svg?style=flat-square
+)](https://coveralls.io/r/tomekwi/jss-lite
 ) [![David – status of dependencies
-](https://img.shields.io/david/tomekwi/css-in-js.svg?style=flat-square
-)](https://david-dm.org/tomekwi/css-in-js
+](https://img.shields.io/david/tomekwi/jss-lite.svg?style=flat-square
+)](https://david-dm.org/tomekwi/jss-lite
 ) [![Code style: airbnb
 ](https://img.shields.io/badge/code%20style-airbnb-777777.svg?style=flat-square
 )](https://github.com/airbnb/javascript
@@ -15,12 +15,14 @@
 
 
 
-# css-in-js
+# jss-lite
 
 **Write stylesheets in JS.  
 Works with any stack.**
 
-There are many ways of writing styles as JS ([Free Style](https://github.com/blakeembrey/free-style), [restyle](https://github.com/WebReflection/restyle) and [babel-plugin-css-in-js](https://github.com/martinandert/babel-plugin-css-in-js) – just to name a few). But none of them has the option to compile to a good old interoperable CSS stylesheet, or the new and shiny [CSS module](https://github.com/css-modules/css-modules). I wanted an easy way to take advantage of JS goodness when writing stylesheets – a way compatible with any tech stack.
+There are many ways of writing styles as JS ([Free Style](https://github.com/blakeembrey/free-style), [restyle](https://github.com/WebReflection/restyle) and [babel-plugin-css-in-js](https://github.com/martinandert/babel-plugin-css-in-js) – just to name a few). But none of them except [jss](https://github.com/jsstyles/jss) has the option to compile to a good old interoperable CSS stylesheet, or the new and shiny [CSS module](https://github.com/css-modules/css-modules). I wanted an easy way to take advantage of JS goodness when writing stylesheets – a way compatible with any tech stack.
+
+I wrote this library before I learned about [jss](https://github.com/jsstyles/jss) (it was called css-in-js back then). It turns out that they do exactly the same thing – and much more. In turn, jss-lite offers an extremely simple, pure functional API without implicit state. We have less features than jss – but that means less developer overhead and better performance.
 
 
 
@@ -30,7 +32,7 @@ There are many ways of writing styles as JS ([Free Style](https://github.com/bla
 ## Installation
 
 ```sh
-npm install [--save] css-in-js
+npm install [--save] jss-lite
 ```
 
 
@@ -41,7 +43,7 @@ npm install [--save] css-in-js
 ## Usage
 
 ```js
-const cssInJs = require('css-in-js');
+const cssInJs = require('jss-lite');
 
 const indigo = '#3F51B5';
 
@@ -122,7 +124,7 @@ To cover these cases, we allow passing an array of style objects:
 
 ## Credits
 
-css-in-js is heavily inspired by the great [elm-css](https://github.com/rtfeldman/elm-css) by [Richard Feldman](https://github.com/rtfeldman). The name is inspired by the disrupting React talk [CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) by [Christopher Chedeau](https://github.com/vjeux).
+jss-lite is heavily inspired by the great [elm-css](https://github.com/rtfeldman/elm-css) by [Richard Feldman](https://github.com/rtfeldman). The original name (css-in-js) comes from the disrupting React talk [CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) by [Christopher Chedeau](https://github.com/vjeux). The current name (jss-lite) is of course derived from our big brother [jss](https://github.com/jsstyles/jss).
 
 
 
