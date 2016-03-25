@@ -43,11 +43,11 @@ npm install [--save] jss-lite
 ## Usage
 
 ```js
-const cssInJs = require('jss-lite');
+const jssLite = require('jss-lite');
 
 const indigo = '#3F51B5';
 
-▸ cssInJs({
+▸ jssLite({
     '.my-button': {
       'width': '50px',
       'background-color': indigo,
@@ -99,7 +99,7 @@ When using fancy things which need a CSS fallback, you might want to set the sam
 To cover these cases, we allow passing an array of style objects:
 
 ```js
-▸ cssInJs({
+▸ jssLite({
     '.drag-me': [{
       cursor: 'pointer',
     }, {

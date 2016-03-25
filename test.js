@@ -1,11 +1,11 @@
 const test = require('ava');
 
-const cssInJs = require('.');
+const jssLite = require('.');
 
 test(
   'Works with one simple block',
   assert => assert.is(
-    cssInJs({
+    jssLite({
       '.my-button': {
         width: '50px',
         'background-color': '#3F51B5',
@@ -23,7 +23,7 @@ test(
 test(
   'Works with multiple blocks',
   assert => assert.is(
-    cssInJs({
+    jssLite({
       '.my-button': {
         width: '50px',
         'background-color': '#3F51B5',
@@ -48,7 +48,7 @@ test(
 test(
   'Works with nested blocks',
   assert => assert.is(
-    cssInJs({
+    jssLite({
       '@media screen and (min-width: 80em)': {
         '.my-button': {
           width: '100%',
@@ -68,7 +68,7 @@ test(
 test(
   'Supports multiple property fallbacks',
   assert => assert.is(
-    cssInJs({
+    jssLite({
       '.drag-me': [{
         cursor: 'pointer',
       }, {
