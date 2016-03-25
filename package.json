@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "develop": "ava --watch",
-    "test": "nyc ava"
+    "test": "eslint . && nyc ava"
   },
   "repository": {
     "type": "git",
