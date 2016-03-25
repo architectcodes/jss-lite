@@ -82,6 +82,54 @@ const indigo = '#3F51B5';
 
 Any JS object is translated recursively to a CSS tree. To ensure two-way compatibility, we only support [git.io/orthodox](https://git.io/orthodox) style objects.
 
+<a                                                       id="/syntax/fonts"></a>
+
+### Fonts and friends
+
+Sometimes you need to define a block with the same pseudo-selector more than once in your stylesheet:
+
+```css
+@font-face {
+  font-family: "Merriweather Light";
+  src: url("fonts/merriweather-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Light";
+  font-style: italic, oblique;
+  src: url("fonts/merriweather-light-italic.woff") format("woff");
+}
+```
+
+A JS object can’t have a `@font-face` key more than once – the latter overwrites the first one. Therefore we allow passing an array of objects:
+
+```js
+▸ jssLite([{
+    '@font-face': {
+      'font-family': '"Merriweather Light"',
+      'src': 'url("fonts/merriweather-light.woff") format("woff")',
+    },
+  }, {
+    '@font-face': {
+      'font-family': '"Merriweather Light"',
+      'font-style': 'italic, oblique',
+      'src': 'url("fonts/merriweather-light-italic.woff") format("woff")',
+    },
+  }]);
+◂ `
+  @font-face {
+    font-family: "Merriweather Light";
+    src: url("fonts/merriweather-light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Merriweather Light";
+    font-style: italic, oblique;
+    src: url("fonts/merriweather-light-italic.woff") format("woff");
+  }
+  `
+```
+
 <a                                                   id="/syntax/fallbacks"></a>
 
 ### Fallbacks

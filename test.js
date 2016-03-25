@@ -85,3 +85,26 @@ test(
 `
   )
 );
+
+test(
+  'Supports multiple blocks with the same pseudo-selector',
+  assert => assert.is(
+    jssLite([{
+      a: {
+        1: '1',
+      },
+    }, {
+      a: {
+        2: '2',
+      },
+    }]),
+`a {
+  1: 1;
+}
+
+a {
+  2: 2;
+}
+`
+  )
+);

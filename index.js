@@ -27,4 +27,11 @@ ${
   return selectors.map(render).join('\n');
 };
 
-module.exports = renderObject;
+module.exports = (jssStylesheet) => {
+  const stylesheets = (Array.isArray(jssStylesheet) ?
+    jssStylesheet :
+    [jssStylesheet]
+  );
+
+  return stylesheets.map(renderObject).join('\n');
+};
